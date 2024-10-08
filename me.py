@@ -124,7 +124,7 @@ def google(title, url):
 
 down = []
 def Avx():
-  topic = openup()
+  topic = openup(title)
   cat = classify(topic)
   link = 'https://arxiv.org/search/' + cat+ '?query=' + topic + '&searchtype=all&abstracts=show&order=-announced_date_first&size=50'
   res = requests.get(link)
@@ -327,7 +327,7 @@ import streamlit as st  # pip install streamlit
 st.header(":mailbox: Hello researcher!")
 topic = st.text_input(label="Research Topic", placeholder="what are you working on?")
 into = st.text_input(label="Additional info.", placeholder="what is it about?")
-
+Email = st.text_input(label="Email.", placeholder="what is your Email")
 
 
 
