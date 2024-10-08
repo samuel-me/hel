@@ -351,11 +351,37 @@ def download_pdf(pdf_path):
         label="Download file",
         data=pdf_bytes,
         file_name=os.path.basename(pdf_path),
-        mime="application/docx"
+        mime="application/zip"
     )
 
 # Replace 'path/to/your/pdf.pdf' with the actual path to your PDF file
 pdf_path = "Summary.docx"
+zipv= 'Papers.zip
+import zlib
+import zipfile
+
+def compress(file_names):
+    print("File Paths:")
+    print(file_names)
+
+#     path = "C:/data/"
+    # Select the compression mode ZIP_DEFLATED for compression
+    # or zipfile.ZIP_STORED to just store the file
+    compression = zipfile.ZIP_DEFLATED
+
+    # create the zip file first parameter path/name, second mode
+    zf = zipfile.ZipFile("Papers.zip", mode="w")
+    try:
+        for file_name in file_names:
+            # Add file to the zip file
+            # first parameter file to zip, second filename in zip
+            zf.write(file_name, file_name, compress_type=compression)
+
+    except FileNotFoundError:
+        print("An error occurred")
+    finally:
+        # Don't forget to close the file!
+        zf.close()
 
 
 # Create a Streamlit button to trigger the download
@@ -397,7 +423,7 @@ if st.button("REsearch"):
 
 
     doc()
-    download_pdf(pdf_path)
+    download_pdf(zipv)
 
 
     
