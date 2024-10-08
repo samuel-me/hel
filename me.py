@@ -382,7 +382,7 @@ import zipfile
 def compress(file_names):
     print("File Paths:")
     print(file_names)
-
+    file_names.append(pdf_path)
 #     path = "C:/data/"
     # Select the compression mode ZIP_DEFLATED for compression
     # or zipfile.ZIP_STORED to just store the file
@@ -446,9 +446,10 @@ if st.button("REsearch"):
 
 
     compress(down)
-    download_zip(zipv)
+    
     doc()
-    download_pdf(pdf_path)
+    download_zip(zipv)
+    #download_pdf(pdf_path)
     
 
 
