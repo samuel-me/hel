@@ -1,8 +1,13 @@
 
 __import__('pysqlite3')
+import sys
 import pysqlite3
 sys.modules['sqlite3'] = sys.modules["pysqlite3"]
 import chromadb
+
+
+import zlib
+import zipfile
 
 import crewai
 import crewai_tools
