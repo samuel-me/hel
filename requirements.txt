@@ -11,9 +11,8 @@ pysqlite3-binary
 langchain-community
 langchain
 langchain-huggingface
-pysqlite3-binary
 chromadb
-pysqlite3
+
 streamlit
  crewai
  crewai-tools
