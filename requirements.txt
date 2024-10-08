@@ -1,0 +1,19 @@
+groq
+ langchain_huggingface
+ langchain-groq
+ python-docx
+ docx2pdf
+ Spire.Doc
+ plum-dispatch==1.7.4
+ requests 
+bs4
+pysqlite3-binary
+langchain-community
+langchain
+langchain-huggingface
+pysqlite3-binary
+chromadb
+pysqlite3
+streamlit
+ crewai
+ crewai-tools
