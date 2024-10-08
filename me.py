@@ -411,7 +411,7 @@ def compress(file_names):
 # Create a Streamlit button to trigger the download
 if st.button("REsearch"):
     data = parse(topic)
-    Avx(topic)
+   
     err = []
 
 
