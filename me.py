@@ -356,7 +356,7 @@ def download_pdf(pdf_path):
 
 # Replace 'path/to/your/pdf.pdf' with the actual path to your PDF file
 pdf_path = "Summary.docx"
-zipv= 'Papers.zip
+zipv= 'Papers.zip'
 import zlib
 import zipfile
 
