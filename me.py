@@ -348,6 +348,25 @@ def download_pdf(pdf_path):
         pdf_bytes = f.read()
 
     st.download_button(
+        label="Download Summary",
+        data=pdf_bytes,
+        file_name=os.path.basename(pdf_path),
+        mime="application/docx"
+    )
+
+def download_zip(pdf_path):
+    """your files woule be ready soon, wait for another go button ready"""
+    
+    
+    """your files are ready"""
+    if not os.path.exists(pdf_path):
+        st.error(f"PDF file '{pdf_path}' not found.")
+        return
+
+    with open(pdf_path, 'rb') as f:
+        pdf_bytes = f.read()
+
+    st.download_button(
         label="Download file",
         data=pdf_bytes,
         file_name=os.path.basename(pdf_path),
@@ -383,6 +402,12 @@ def compress(file_names):
         # Don't forget to close the file!
         zf.close()
 
+
+## ######
+Avx()
+compress(down)
+download_zip(zipv)
+## ########
 
 # Create a Streamlit button to trigger the download
 if st.button("REsearch"):
@@ -423,8 +448,8 @@ if st.button("REsearch"):
 
 
     doc()
-    compress(down)
-    download_pdf(zipv)
+    download_pdf(pdf_file)
+    
 
 
     
