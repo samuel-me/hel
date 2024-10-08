@@ -12,8 +12,7 @@ langchain-community
 langchain
 langchain-huggingface
 chromadb
-zlib
-zipfile
+
 streamlit
  crewai
  crewai-tools
