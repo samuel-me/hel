@@ -123,7 +123,7 @@ def google(title, url):
 #AVX
 
 down = []
-def Avx():
+def Avx(topic):
   topic = openup(topic)
   cat = classify(topic)
   link = 'https://arxiv.org/search/' + cat+ '?query=' + topic + '&searchtype=all&abstracts=show&order=-announced_date_first&size=50'
@@ -404,15 +404,14 @@ def compress(file_names):
 
 
 ## ######
-Avx()
-compress(down)
-download_zip(zipv)
+
+
 ## ########
 
 # Create a Streamlit button to trigger the download
 if st.button("REsearch"):
     data = parse(topic)
-
+    Avx(topic)
     err = []
 
 
@@ -446,7 +445,8 @@ if st.button("REsearch"):
 
 
 
-
+    compress(down)
+    download_zip(zipv)
     doc()
     download_pdf(pdf_file)
     
