@@ -448,7 +448,7 @@ if st.button("REsearch"):
     compress(down)
     download_zip(zipv)
     doc()
-    download_pdf(pdf_file)
+    download_pdf(pdf_path)
     
 
 
