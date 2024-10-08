@@ -423,6 +423,7 @@ if st.button("REsearch"):
 
 
     doc()
+    compress(down)
     download_pdf(zipv)
 
 
