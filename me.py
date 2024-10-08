@@ -124,7 +124,7 @@ def google(title, url):
 
 down = []
 def Avx():
-  topic = openup(title)
+  topic = openup(topic)
   cat = classify(topic)
   link = 'https://arxiv.org/search/' + cat+ '?query=' + topic + '&searchtype=all&abstracts=show&order=-announced_date_first&size=50'
   res = requests.get(link)
